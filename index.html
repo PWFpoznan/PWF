@@ -1,0 +1,3175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<!-- =========================================================
+     META / SEO
+     ========================================================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poznańskie Warsztaty Filmowe (PWF) — 3 dni praktycznego kina</title>
+<meta name="description" content="Poznańskie Warsztaty Filmowe (PWF) — 3 dni praktycznych zajęć, pracy zespołowej i nauki od profesjonalistów. Ucz się od ekspertów branży, zdobywaj doświadczenie i rozwijaj swoje umiejętności. Zapisy trwają.">
+<meta name="keywords" content="warsztaty filmowe Poznań, PWF, kurs filmowy, warsztaty dla filmowców, szkolenie filmowe, kino niezależne Poznań">
+<meta name="author" content="Poznańskie Warsztaty Filmowe">
+<link rel="canonical" href="https://www.pwfpoznan.pl/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Poznańskie Warsztaty Filmowe (PWF)">
+<meta property="og:description" content="3 dni praktycznych warsztatów filmowych w Poznaniu. Dołącz do PWF.">
+<meta property="og:image" content="https://ik.imagekit.io/pwfpoznan/Bez%20nazwy-1.png">
+<meta property="og:url" content="https://www.pwfpoznan.pl/">
+<meta property="og:locale" content="pl_PL">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Google Fonts: Red Hat Display -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Lenis CSS (dla płynnego scrolla filmowego) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
+
+
+<style>
+/* =========================================================
+   0. RESET I ZMIENNE
+   ========================================================= */
+:root{
+  --logo-url: 'https://ik.imagekit.io/pwfpoznan/02.%20IQL%20-%20PWF%20-%20LOGO%20-%20BIA%C5%81E.png?updatedAt=1784768917058';
+
+  --color-black:#09090B;
+  --color-black-2:#1D1E22;
+  --color-black-3:#3E403F;
+  --color-muted:#6C6C6C;
+  --color-muted-onblack:rgba(255,255,255,.56);
+
+  --color-white:#FFFFFF;
+  --color-light:#F3F4F6;
+  --color-light-2:#E4E7EC;
+  --color-light-3:#CFD3DE;
+
+  --accent-yellow:#FACC15;      --accent-yellow-dark:#C78604;  --accent-yellow-light:#FAB824; --accent-yellow-pale:#FBF3C5;
+  --accent-orange:#F36B0F;      --accent-orange-dark:#D34811;  --accent-orange-light:#F58D38; --accent-orange-pale:#FDD5A4;
+  --accent-magenta:#E63D8A;     --accent-magenta-dark:#C92771; --accent-magenta-light:#F577B4; --accent-magenta-pale:#FBD1E9;
+  --accent-violet:#6434ED;      --accent-violet-dark:#4F25B7;  --accent-violet-light:#8F79F2;  --accent-violet-pale:#DCD4FB;
+  --accent-blue:#246EEF;        --accent-blue-dark:#205DB7;    --accent-blue-light:#5A9DEE;    --accent-blue-pale:#B2D3FC;
+
+  --font-display:'Red Hat Display', Arial, sans-serif;
+  --font-body:'Red Hat Display', Arial, sans-serif;
+
+  /* Zmniejszone przerwy górne i dolne między sekcjami */
+  --section-pad-y:clamp(30px, 5vw, 60px);
+  --container-x:clamp(24px, 6vw, 96px);
+  --max-w:1360px;
+  --sidebar-w:155px;
+
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --dur-med:.7s;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+}
+
+body{
+  font-family:var(--font-body);
+  background:var(--color-black);
+  color:var(--color-white);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit;}
+ul{list-style:none;}
+input,textarea{font-family:inherit;}
+
+::selection{background:var(--color-light);color:var(--color-black);}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible{
+  outline:2px solid var(--accent-yellow);
+  outline-offset:4px;
+  border-radius:2px;
+}
+
+.skip-link{
+  position:fixed;
+  top:-100px;
+  left:16px;
+  z-index:1000;
+  background:var(--accent-yellow);
+  color:var(--color-black);
+  padding:12px 20px;
+  font-weight:700;
+  border-radius:4px;
+  transition:top .2s var(--ease-out);
+}
+.skip-link:focus{top:16px;}
+
+.container{
+  max-width:var(--max-w);
+  margin-inline:auto;
+  padding-inline:var(--container-x);
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--color-muted-onblack);
+  margin-bottom:16px;
+}
+.eyebrow::before{
+  content:'';
+  width:28px;height:1px;
+  background:var(--eyebrow-accent, var(--accent-yellow));
+}
+.section--light .eyebrow{color:#6B7280;}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:800;
+  line-height:1.08;
+  letter-spacing:-.02em;
+}
+
+.section-title{
+  font-size:clamp(2.2rem, 5vw, 4.2rem);
+  max-width:16ch;
+  margin-bottom:36px;
+}
+
+.section{
+  padding-block:var(--section-pad-y);
+  position:relative;
+}
+.section--light{
+  background:var(--color-light);
+  color:var(--color-black);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  font-weight:700;
+  font-size:.92rem;
+  letter-spacing:.02em;
+  padding:18px 34px;
+  border-radius:100px;
+  transition:transform .45s var(--ease-out), background .3s ease, color .3s ease, box-shadow .3s ease;
+  white-space:nowrap;
+}
+/* 1. Definicja animacji poruszającej tło */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Wymagane pozycjonowanie dla przycisków */
+.btn-primary,
+.btn-outline {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  /* Pozwala cieniowi swobodnie wychodzić poza obręb przycisku */
+  overflow: visible !important; 
+}
+
+/* --- BTN PRIMARY --- */
+.btn-primary {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Przygotowanie warstwy cienia */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: linear-gradient(90deg, #246eef, #6434ed, #e63d8a, #f36b0f, #facc15);
+  background-size: 300% 300%;
+  animation: moveGradient 4s ease infinite;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(12px); /* Zmniejszone blur z 14px na 12px, aby nie uciekało za daleko */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  will-change: transform, opacity; /* Zapewnia płynny rendering w przeglądarce */
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #246eef, #6434ed, #e63d8a, #f36b0f, #facc15);
+  background-size: 300% 300%;
+  animation: moveGradient 4s ease infinite;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.btn-primary:hover::before {
+  opacity: 0.85;
+  transform: translateY(4px); /* Płynne opadanie cienia w dół */
+}
+
+/* --- BTN OUTLINE --- */
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: var(--color-white);
+}
+
+/* Przygotowanie warstwy cienia dla Outline */
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: linear-gradient(90deg, #246eef, #6434ed, #e63d8a, #f36b0f, #facc15);
+  background-size: 300% 300%;
+  animation: moveGradient 4s ease infinite;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.btn-outline:hover {
+  background: linear-gradient(90deg, #246eef, #6434ed, #e63d8a, #f36b0f, #facc15);
+  background-size: 300% 300%;
+  animation: moveGradient 4s ease infinite;
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.btn-outline:hover::before {
+  opacity: 0.85;
+  transform: translateY(4px);
+}
+.btn-outline2{
+  border:1px solid rgba(255,255,255,.28);
+  color:var(--color-white);
+}
+.btn-outline2:hover{
+  border-color:var(--color-white);
+  transform:translateY(-3px);
+}
+.section--light .btn-outline{border-color:rgba(9,9,11,.24);color:var(--color-black);}
+.section--light .btn-outline:hover{border-color:var(--color-black);}
+
+/* Reveal on scroll */
+.reveal{
+  opacity:0;
+  transform:translateY(36px);
+  transition:opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+.reveal-scale{opacity:0;transform:scale(.94);transition:opacity 1s var(--ease-out), transform 1.1s var(--ease-out);}
+.reveal-scale.is-visible{opacity:1;transform:scale(1);}
+.reveal-delay-1.is-visible{transition-delay:.1s;}
+.reveal-delay-2.is-visible{transition-delay:.2s;}
+.reveal-delay-3.is-visible{transition-delay:.3s;}
+
+/* =========================================================
+   1. NAWIGACJA
+   ========================================================= */
+.site-header{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:960; /* musi być WYŻEJ niż .main-nav (950) w widoku mobilnym, inaczej przycisk zamykania menu chowa się pod nakładką */
+  padding:16px var(--container-x);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  transition:padding .4s var(--ease-out), background .4s var(--ease-out), backdrop-filter .4s ease, border-color .4s ease;
+  border-bottom:1px solid transparent;
+}
+.site-header.is-scrolled{
+  padding-block:12px;
+  background:rgba(9,9,11,.72);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom-color:rgba(255,255,255,.08);
+}
+
+.logo{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:1.35rem;
+  letter-spacing:-.01em;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo-img{
+  max-height:36px;
+  width:auto;
+  object-fit:contain;
+  content: url(var(--logo-url));}
+
+.logo span{color:var(--accent-yellow);}
+
+.nav-toggle{
+  display:none;
+  width:44px;height:44px;
+  align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:50%;
+  z-index:901;
+}
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after{
+  content:'';
+  display:block;
+  width:18px;height:2px;
+  background:var(--color-white);
+  position:relative;
+  transition:transform .3s ease, opacity .3s ease;
+}
+.nav-toggle span::before{position:absolute;top:-6px;}
+.nav-toggle span::after{position:absolute;top:6px;}
+.nav-toggle[aria-expanded="true"] span{background:transparent;}
+.nav-toggle[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg);}
+.nav-toggle[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg);}
+
+.main-nav ul{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  width:100%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.main-nav a[data-nav]{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:100%;
+  height: 100%;
+  background:var(--square-color, var(--color-black-2));
+  color:var(--color-black);
+  border-radius:8px;
+  padding:8px 10px;
+  font-family:var(--font-display);
+  font-size:.74rem;
+  font-weight:800;
+  transition:transform .35s var(--ease-out), filter .3s ease;
+}
+.main-nav a[data-nav]:hover,
+.main-nav a[data-nav].is-active{transform:translateY(-2px);filter:brightness(1.06);}
+
+.nav-square-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:.6rem;
+  font-weight:800;
+  margin-bottom:2px;
+}
+.nav-square-top i{font-size:.55rem;}
+
+.nav-square-label{
+  margin-top:0;
+  line-height:1.1;
+  word-break:break-word;
+  white-space:normal;
+}
+
+.main-nav .btn-primary{
+  width: 100%;
+  height: 100%;
+  background:var(--color-black-2);
+  color:var(--color-white);
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:8px 6px;
+  font-size:.74rem;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:8px;
+}
+.main-nav .btn-primary:hover{background:var(--color-white);color:var(--color-black);transform:translateY(-2px);box-shadow:0 16px 34px -12px #FFFF;}
+
+/* Podświetlenia social mediów wg wytycznych */
+.nav-menu-social{
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  flex-shrink: 0;
+  padding-top:12px;
+}
+.nav-menu-social a{
+  width:24px;height:24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--color-black-2);
+  color:var(--color-white);
+  font-size:.68rem;
+  border:1px solid rgba(255,255,255,.14);
+  transition:background .3s ease, color .3s ease;
+  flex-shrink: 0;
+}
+.nav-menu-social a[aria-label*="Facebook"]:hover{background:#246EEF;color:#fff;}
+.nav-menu-social a[aria-label*="Instagram"]:hover{background:#6434ED;color:#fff;}
+.nav-menu-social a[aria-label*="TikTok"]:hover{background:#E63D8A;color:#fff;}
+.nav-menu-social a[aria-label*="YouTube"]:hover{background:#F36B0F;color:#fff;}
+
+.nav-logo{display:none;}
+
+@media (max-width:860px){
+  .nav-toggle{display:flex;}
+  .main-nav{
+    position:fixed;
+    inset:0;
+    background:var(--color-black);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    overflow-y:auto;
+    transform:translateY(-100%);
+    transition:transform .5s var(--ease-out);
+    z-index:950;
+    padding-block:90px 32px;
+  }
+  .main-nav.is-open{transform:translateY(0);}
+  .main-nav ul{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    align-content:center;
+    gap:12px;
+    max-width:300px;
+    width:100%;
+    flex:0 0 auto; /* bez tego .main-nav ul{flex:1} rozciągało siatkę na całą wysokość,
+                       spychając ikony social media na sam dół ekranu */
+    padding-inline:20px;
+    margin-inline:auto;
+  }
+  /* Wszystkie 6 kafelków (w tym "Zapisz się") w jednym, równym gridzie 2x3.
+     min-width:0 jest konieczne — bez tego aspect-ratio w połączeniu z torami 1fr
+     powodował, że kafelki wychodziły poza kontener i "rozjeżdżały się". */
+  .main-nav ul li{aspect-ratio:1/1; min-width:0; min-height:0;}
+  .main-nav .btn-primary{
+    aspect-ratio:1/1;
+    font-size:.8rem;
+  }
+  .nav-menu-social{
+    margin-top:24px;
+    padding-top:0;
+  }
+}
+
+@media (min-width:861px){
+  .site-header{display:none;}
+
+  .main-nav{
+    position:fixed;
+    top:0;left:0;bottom:0;
+    width:var(--sidebar-w);
+    background:var(--color-black);
+    border-right:1px solid rgba(255,255,255,.08);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    padding:24px;
+    z-index:850;
+  }
+  .nav-logo{
+    display:flex;
+    margin-bottom:24px;
+    flex-shrink:0;
+    justify-content:center;
+  }
+
+  #main, .site-footer{margin-left:var(--sidebar-w);}
+}
+
+/* =========================================================
+   2. HERO
+   ========================================================= */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-end;
+  text-align:left;
+  overflow:hidden;
+  background:var(--color-black);
+}
+.hero-media{
+  position:absolute;inset:0;
+  z-index:0;
+}
+.hero-media canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-media::after{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    linear-gradient(0deg, rgba(9,9,11,.85) 0%, rgba(9,9,11,.4) 38%, rgba(9,9,11,.15) 62%, rgba(9,9,11,.4) 100%),
+    linear-gradient(90deg, rgba(9,9,11,.4) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* STYLI DLA SEKCJI LOGO W PRAWYM GÓRNYM ROGU HERO */
+.hero-top-partners {
+  position: absolute;
+  top: 24px;
+  right: clamp(16px, 4vw, 48px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 6px 18px;
+  background: rgba(18, 19, 22, 0.45);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.hero-partner-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-partner-text {
+  font-size: 0.52rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+.hero-partner-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-partner-logos a {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  transition: opacity .25s ease;
+}
+
+.hero-partner-logos a:hover,
+.hero-partner-logos a:focus-visible {
+  opacity: 0.75;
+}
+
+.hero-partner-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.hero-logo-1 {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hero-logo-2 {
+  height: 16px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hero-logo-pisf {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    /* Sekcja hero nie musi wypełniać całego ekranu na telefonie — gdy kafelek
+       z logami wszedł w naturalny przepływ treści, wymuszanie 100svh
+       zostawiało dużą, pustą przestrzeń nad nim. Zamiast tego hero dopasowuje
+       wysokość do treści, z odstępem od stałego nagłówka. */
+    min-height: auto;
+    justify-content: flex-start;
+    padding-top: 96px;
+  }
+  .hero-top-partners {
+    /* Kafelek wchodzi w naturalny przepływ treści hero i ląduje bezpośrednio
+       nad nagłówkiem z datą (.hero-kicker), zamiast pływać w rogu nad zdjęciem. */
+    position: static;
+    align-self: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 8px 12px;
+    margin: 0 var(--container-x) 22px;
+    max-width: calc(100% - 2 * var(--container-x));
+  }
+  .hero-partner-divider {
+    display: none;
+  }
+}
+
+.grain{
+  position:absolute;inset:0;
+  pointer-events:none;
+  opacity:.05;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index:2;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:100%;
+  padding:0 var(--container-x) clamp(64px, 9vw, 112px);
+}
+
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--accent-yellow);
+  margin-bottom:26px;
+}
+.hero-kicker::before{content:'';width:24px;height:1px;background:var(--accent-yellow);}
+.hero-title{
+  font-size:clamp(2.6rem, 8vw, 6.4rem);
+  max-width:14ch;
+  margin-bottom:24px;
+}
+.hero-sub{
+  font-size:clamp(1.05rem, 1.6vw, 1.3rem);
+  color:rgba(255,255,255,.82);
+  max-width:48ch;
+  margin-bottom:38px;
+  font-weight:400;
+  line-height:1.55;
+}
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 32px;
+  font-size:.95rem;
+  color:rgba(255,255,255,.82);
+  margin-bottom:40px;
+}
+.hero-meta li{display:flex;align-items:center;gap:10px;}
+.hero-meta i{color:var(--accent-orange);}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.hero-social{
+  position:absolute;
+  right:clamp(16px,3vw,44px);
+  top:50%;
+  transform:translateY(-50%);
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+}
+.hero-social::after{
+  content:'';
+  width:1px;height:64px;
+  background:rgba(255,255,255,.22);
+}
+.hero-social a{
+  width:38px;height:38px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  color:rgba(255,255,255,.7);
+  font-size:.95rem;
+  transition:color .3s ease, transform .3s ease, background .3s ease;
+}
+.hero-social a[aria-label*="Facebook"]:hover{background:#246EEF;color:#fff;transform:translateX(-4px) scale(1.08);}
+.hero-social a[aria-label*="Instagram"]:hover{background:#6434ED;color:#fff;transform:translateX(-4px) scale(1.08);}
+.hero-social a[aria-label*="TikTok"]:hover{background:#E63D8A;color:#fff;transform:translateX(-4px) scale(1.08);}
+.hero-social a[aria-label*="YouTube"]:hover{background:#F36B0F;color:#fff;transform:translateX(-4px) scale(1.08);}
+
+@media (max-width:720px){
+  .hero-social{display:none;}
+}
+
+.scroll-indicator{
+  position:absolute;
+  bottom:36px;left:50%;
+  transform:translateX(-50%);
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  color:rgba(255,255,255,.55);
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.scroll-indicator .mouse{
+  width:24px;height:38px;
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:14px;
+  display:flex;justify-content:center;
+  padding-top:7px;
+}
+.scroll-indicator .dot{
+  width:3px;height:7px;
+  border-radius:2px;
+  background:var(--accent-yellow);
+  animation:scrollDot 1.8s ease infinite;
+}
+@keyframes scrollDot{
+  0%{transform:translateY(0);opacity:1;}
+  70%{transform:translateY(10px);opacity:0;}
+  100%{opacity:0;}
+}
+
+/* Na mobile animacja "scroll myszką" jest całkowicie ukryta.
+   Ta reguła MUSI być zdefiniowana po bazowej .scroll-indicator{display:flex...},
+   inaczej selektor o tej samej specyficzności zdefiniowany wcześniej przegrywa. */
+@media (max-width:720px){
+  .scroll-indicator{display:none;}
+}
+
+/* =========================================================
+   2b. MARQUEE
+   ========================================================= */
+.marquee-section{
+  overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding-block:26px;
+  background:var(--color-black-2);
+}
+.marquee-track{
+  display:flex;
+  width:max-content;
+  animation:marqueeScroll 32s linear infinite;
+}
+.marquee-track:hover{animation-play-state:paused;}
+@keyframes marqueeScroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+.marquee-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding-inline:clamp(20px,3vw,40px);
+  font-size:.95rem;
+  font-weight:700;
+  white-space:nowrap;
+  color:rgba(255,255,255,.85);
+}
+.marquee-item i{color:var(--accent-blue);font-size:.85rem;}
+.marquee-item::after{
+  content:'';
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--accent-blue);
+  margin-left:clamp(20px,3vw,40px);
+}
+.marquee-item:nth-child(6n+1) i{color:var(--accent-blue);}
+.marquee-item:nth-child(6n+1)::after{background:var(--accent-blue);}
+.marquee-item:nth-child(6n+2) i{color:var(--accent-violet);}
+.marquee-item:nth-child(6n+2)::after{background:var(--accent-violet);}
+.marquee-item:nth-child(6n+3) i{color:var(--accent-magenta);}
+.marquee-item:nth-child(6n+3)::after{background:var(--accent-magenta);}
+.marquee-item:nth-child(6n+4) i{color:var(--accent-orange);}
+.marquee-item:nth-child(6n+4)::after{background:var(--accent-orange);}
+.marquee-item:nth-child(6n+5) i{color:var(--accent-yellow);}
+.marquee-item:nth-child(6n+5)::after{background:var(--accent-yellow);}
+.marquee-item:nth-child(6n+6) i{color:var(--accent-blue);}
+.marquee-item:nth-child(6n+6)::after{background:var(--accent-blue);}
+.marquee-item:nth-child(6n+7) i{color:var(--accent-violet);}
+.marquee-item:nth-child(6n+7)::after{background:var(--accent-violet);}
+.marquee-item:nth-child(6n+8) i{color:var(--accent-magenta);}
+.marquee-item:nth-child(6n+8)::after{background:var(--accent-magenta);}
+.marquee-item:nth-child(6n+9) i{color:var(--accent-orange);}
+.marquee-item:nth-child(6n+9)::after{background:var(--accent-orange);}
+.marquee-item:nth-child(6n+10) i{color:var(--accent-yellow);}
+.marquee-item:nth-child(6n+10)::after{background:var(--accent-yellow);}
+
+
+/* =========================================================
+   3. LICZNIK - ODŚWIEŻONY WYGLĄD
+   ========================================================= */
+.countdown-section{
+  padding-block:60px;
+  background: linear-gradient(180deg, rgba(29,30,34,0.6) 0%, rgba(9,9,11,1) 100%);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  position: relative;
+}
+.countdown-wrap{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+.countdown-label{
+  font-size:.95rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--color-white);
+  max-width:28ch;
+  line-height:1.4;
+}
+.countdown-timer{
+  display:flex;
+  gap:clamp(12px, 2.5vw, 24px);
+}
+.countdown-timer .unit{
+  text-align:center;
+  background: rgba(40, 41, 46, 0.65);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  border-radius: 12px;
+  padding: 14px 20px;
+  min-width: 90px;
+  box-shadow: 0 8px 24px -6px rgba(0,0,0,0.5), inset 0 0 12px rgba(250, 204, 21, 0.05);
+  transition: transform .3s ease, border-color .3s ease;
+}
+.countdown-timer .unit:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-yellow);
+}
+.countdown-timer .num{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(2.2rem, 4.5vw, 3.8rem);
+  font-variant-numeric:tabular-nums;
+  line-height:1;
+  color: var(--accent-yellow);
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+}
+.countdown-timer .unit-label{
+  display:block;
+  margin-top:8px;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.7);
+}
+.countdown-closed{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:1.4rem;
+  color:var(--accent-yellow);
+  display:none;
+}
+
+/* =========================================================
+   4. O WARSZTATACH
+   ========================================================= */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(40px, 6vw, 96px);
+  align-items:center;
+}
+.about-text p{
+  font-size:clamp(.85rem, 1vw, 1rem);
+  line-height:1.75;
+  color:rgba(255,255,255,.78);
+  margin-bottom:20px;
+  max-width:52ch;
+}
+.about-stats{
+  display:flex;
+  gap:clamp(24px, 4vw, 48px);
+  margin-top:40px;
+}
+.about-stats .stat-num{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(2rem, 3vw, 2.8rem);
+  color:var(--accent-blue);
+}
+.about-stats .stat-label{
+  font-size:.8rem;
+  color:var(--color-muted-onblack);
+  margin-top:4px;
+}
+.about-media{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  aspect-ratio:1/1;
+}
+.about-media img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 1.2s var(--ease-out);
+}
+.about-media:hover img{transform:scale(1.04);}
+
+@media (max-width:860px){
+  .about-grid{grid-template-columns:1fr;}
+  .about-media{order:-1;}
+}
+
+/* =========================================================
+   5. DLA KOGO
+   ========================================================= */
+.tiles-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(9,9,11,.08);
+  border:1px solid rgba(9,9,11,.08);
+  border-radius:20px;
+  overflow:hidden;
+}
+.tile{
+  background:var(--color-white);
+  padding:44px 32px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  transition:background .35s ease, transform .35s var(--ease-out);
+}
+.tile-icon{
+  width:52px;height:52px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;
+  background:var(--color-light);
+  transition:background .35s ease, color .35s ease, transform .35s ease;
+}
+.tile:hover{background:var(--color-black);transform:translateY(-4px);}
+.tile:hover .tile-icon{background:var(--accent-yellow);color:var(--color-black);transform:rotate(-8deg);}
+.tile:nth-child(1):hover .tile-icon{background:var(--accent-violet);}
+.tile:nth-child(2):hover .tile-icon{background:var(--accent-blue);}
+.tile:nth-child(3):hover .tile-icon{background:var(--accent-magenta);}
+.tile:nth-child(4):hover .tile-icon{background:var(--accent-orange);}
+.tile:nth-child(5):hover .tile-icon{background:var(--accent-yellow);}
+.tile:nth-child(6):hover .tile-icon{background:var(--accent-violet);}
+.tile:hover h3,.tile:hover p{color:var(--color-white);}
+.tile:hover p{color:rgba(255,255,255,.65);}
+.tile h3{font-size:1.15rem;transition:color .35s ease;}
+.tile p{font-size:.92rem;line-height:1.6;color:#6B7280;transition:color .35s ease;}
+
+@media (max-width:900px){.tiles-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.tiles-grid{grid-template-columns:1fr;}}
+
+/* =========================================================
+   5b. CO OBEJMUJE UDZIAŁ
+   ========================================================= */
+.feature-cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:20px;
+}
+.feature-card{
+  border-radius:18px;
+  overflow:hidden;
+  background:var(--color-black-2);
+  border:1px solid rgba(255,255,255,.08);
+  transition:transform .5s var(--ease-out), border-color .4s ease;
+}
+.feature-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.2);}
+.feature-card-media{aspect-ratio:4/3;overflow:hidden;}
+.feature-card-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-out);}
+.feature-card:hover .feature-card-media img{transform:scale(1.06);}
+.feature-card-body{padding:26px 24px 30px;}
+.feature-card-body h3{font-size:1.15rem;margin-bottom:4px;}
+.feature-card-body .subtitle{font-size:.82rem;color:var(--accent-yellow);font-weight:700;margin-bottom:16px;}
+.feature-card-body ul{display:flex;flex-direction:column;gap:9px;}
+.feature-card-body li{
+  font-size:.86rem;
+  color:rgba(255,255,255,.68);
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  line-height:1.5;
+}
+.feature-card-body li i{color:var(--accent-yellow);font-size:.7rem;margin-top:5px;flex-shrink:0;}
+.feature-card:nth-child(1) .feature-card-body li i{color:var(--accent-blue);}
+.feature-card:nth-child(1) .feature-card-body .subtitle{color:var(--accent-blue);}
+.feature-card:nth-child(2) .feature-card-body li i{color:var(--accent-violet);}
+.feature-card:nth-child(2) .feature-card-body .subtitle{color:var(--accent-violet);}
+.feature-card:nth-child(3) .feature-card-body li i{color:var(--accent-orange);}
+.feature-card:nth-child(3) .feature-card-body .subtitle{color:var(--accent-orange);}
+.feature-card:nth-child(4) .feature-card-body li i{color:var(--accent-yellow);}
+.feature-card:nth-child(4) .feature-card-body .subtitle{color:var(--accent-yellow);}
+
+@media (max-width:1024px){.feature-cards{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.feature-cards{grid-template-columns:1fr;}}
+
+/* =========================================================
+   6. PROGRAM
+   ========================================================= */
+.program-list{display:flex;flex-direction:column;gap:16px;margin-top:20px;}
+.program-card{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;
+  overflow:hidden;
+  transition:border-color .4s ease;
+}
+.program-card.is-open{border-color:rgba(250,204,21,.4);}
+.program-card-head{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:30px clamp(20px,3vw,40px);
+  text-align:left;
+  cursor:pointer;
+}
+.program-card-head .day-num{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(1rem,1.4vw,1.1rem);
+  color:var(--accent-yellow);
+  min-width:70px;
+}
+.program-card-head .day-title{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(1.3rem,2.4vw,1.9rem);
+  flex:1;
+}
+.program-card-head .day-focus{
+  font-size:.88rem;
+  color:var(--color-muted-onblack);
+  display:none;
+}
+@media (min-width:760px){.program-card-head .day-focus{display:block;}}
+.program-card-head .toggle-icon{
+  width:38px;height:38px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.25);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  transition:transform .45s var(--ease-out), background .3s ease, border-color .3s ease;
+}
+.program-card.is-open .toggle-icon{
+  transform:rotate(135deg);
+  background:var(--accent-yellow);
+  border-color:var(--accent-yellow);
+  color:var(--color-black);
+}
+.program-card-body{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .6s var(--ease-out);
+}
+.timeline{
+  padding:0 clamp(20px,3vw,40px) 36px;
+  display:flex;
+  flex-direction:column;
+}
+.timeline-item{
+  display:grid;
+  grid-template-columns:128px 1fr;
+  gap:20px;
+  padding-block:18px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.timeline-item .time{
+  font-weight:700;
+  color:var(--accent-yellow);
+  font-size:.92rem;
+}
+.timeline-item h4{font-size:1.02rem;font-weight:700;margin-bottom:4px;}
+.timeline-item p{font-size:.9rem;color:var(--color-muted-onblack);line-height:1.6;}
+
+.type-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  padding:3px 10px;
+  border-radius:100px;
+  margin-bottom:8px;
+}
+.type-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;}
+.type-warsztat{background:rgba(36,110,239,.14);color:var(--accent-blue-light);}
+.type-organizacja{background:rgba(100,52,237,.16);color:var(--accent-violet-light);}
+.type-wyklad{background:rgba(230,61,138,.16);color:var(--accent-magenta-light);}
+.type-przerwa{background:rgba(243,107,15,.16);color:var(--accent-orange-light);}
+.type-pokaz{background:#facc1529;color:var(--accent-yellow-light);}
+
+/* =========================================================
+   7. ORGANIZATORZY
+   ========================================================= */
+.people-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:clamp(20px,2.5vw,32px);
+}
+.person-card{text-align:left;}
+.person-photo{
+  aspect-ratio:3/4;
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:20px;
+  background:var(--color-light-2);
+}
+.person-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(30%);transition:filter .5s ease, transform .8s var(--ease-out);}
+.person-card:hover .person-photo img{filter:grayscale(0%);transform:scale(1.03);}
+.person-card h3{font-size:1.15rem;margin-bottom:4px;}
+.person-card .role{color:var(--accent-blue);font-size:.85rem;font-weight:700;margin-bottom:10px;}
+.person-card p.bio{font-size:.88rem;color:#4B5563;line-height:1.6;}
+
+/* Sekcja dwóch logo pod organizatorami */
+.organizers-logos{
+  margin-top:56px;
+  padding-top:40px;
+  border-top:1px solid rgba(9,9,11,.1);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+.organizers-logos-title{
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#6B7280;
+}
+.organizers-logos-grid{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  width:100%;
+}
+.organizer-logo-box{
+  background:var(--color-white);
+  border:1px solid rgba(9,9,11,.1);
+  border-radius:14px;
+  padding:20px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:220px;
+  height:100px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.03);
+}
+.organizer-logo-box img{
+  max-height:50px;
+  width:auto;
+  object-fit:contain;
+}
+
+@media (max-width:1024px){
+  .people-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:560px){
+  .people-grid{grid-template-columns:1fr;}
+  .organizers-logos-grid{flex-direction:column;gap:16px;}
+  .organizer-logo-box{
+    width:100%;
+    height:auto;
+    min-height:80px;
+    padding:16px 24px;
+  }
+  /* Loga mają inline'owe max-height w %, które przy height:auto przestaje działać
+     i powoduje, że grafiki nie mieszczą się w ramce — wymuszamy stały rozmiar w px */
+  .organizer-logo-box img{
+    max-height:40px !important;
+    width:auto;
+    max-width:80%;
+  }
+}
+
+/* =========================================================
+   8. PARTNERZY
+   ========================================================= */
+.partners-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:1px;
+  background:rgba(9,9,11,.08);
+  border:1px solid rgba(9,9,11,.08);
+}
+.partner-cell{
+  background:var(--color-white);
+  aspect-ratio:16/10;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+}
+.partner-cell img{
+  max-height:36px;
+}
+
+@media (max-width:860px){.partners-grid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:560px){
+  .partners-grid{grid-template-columns:repeat(2,1fr);}
+  .partner-cell{padding:14px;}
+  .partner-cell img{max-height:28px;}
+}
+
+/* =========================================================
+   9. LOKALIZACJA (ZMMODYFIKOWANA)
+   ========================================================= */
+.location-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:clamp(32px,4vw,64px);
+  align-items:stretch;
+}
+.location-grid.reverse {
+  grid-template-columns:.9fr 1.1fr;
+}
+.location-grid.reverse .location-info {
+  order: 2;
+}
+.location-grid.reverse .location-photo {
+  order: 1;
+}
+
+.location-photo{
+  border-radius:18px;
+  overflow:hidden;
+  min-height:340px;
+}
+.location-photo img{width:100%;height:100%;object-fit:cover;}
+.location-info{display:flex;flex-direction:column;justify-content:center;}
+
+.location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-blue);
+  background: #246eef1a;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.location-address{
+  font-size:1.05rem;
+  line-height:1.7;
+  color:rgba(255,255,255,.8);
+  margin-bottom:24px;
+}
+.location-map{
+  border-radius:14px;
+  overflow:hidden;
+  margin-bottom:28px;
+  border:1px solid rgba(255,255,255,.12);
+  background: var(--color-black-2);
+  height:260px;
+}
+.location-map iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+  filter:grayscale(30%) contrast(95%);
+}
+
+@media (max-width:860px){
+  .location-grid, .location-grid.reverse {
+    grid-template-columns:1fr;
+  }
+  .location-grid.reverse .location-info {
+    order: unset;
+  }
+  .location-grid.reverse .location-photo {
+    order: unset;
+  }
+}
+
+/* =========================================================
+   10. ZAPISY (CTA)
+   ========================================================= */
+.signup-section{
+  text-align:center;
+  background:
+    radial-gradient(60% 80% at 50% 100%, #6434ed2e, transparent 70%),
+    var(--color-black);
+}
+.signup-section h2{
+  font-size:clamp(2.4rem,6vw,5rem);
+  max-width:20ch;
+  margin-inline:auto;
+  margin-bottom:20px;
+}
+.signup-section p{
+  color:var(--color-muted-onblack);
+  max-width:48ch;
+  margin:0 auto 40px;
+  font-size:1.05rem;
+}
+
+.btn-huge{
+  padding:24px 56px;
+  font-size:1.05rem;
+}
+
+/* =========================================================
+   11. FAQ
+   ========================================================= */
+.faq-list{max-width:840px;margin-inline:auto;}
+.faq-item{border-bottom:1px solid rgba(9,9,11,.12);}
+.faq-q{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:26px 4px;
+  text-align:left;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.05rem;
+  cursor:pointer;
+}
+.faq-q .plus{
+  flex-shrink:0;
+  width:30px;height:30px;
+  border-radius:50%;
+  border:1px solid rgba(9,9,11,.2);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .4s var(--ease-out), background .3s ease, border-color .3s ease;
+}
+.faq-item.is-open .faq-q .plus{
+  transform:rotate(135deg);
+  background:var(--color-black);
+  border-color:var(--color-black);
+  color:var(--color-white);
+}
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .55s var(--ease-out);
+}
+.faq-a p{padding:0 4px 26px;max-width:64ch;color:#4B5563;line-height:1.7;font-size:.96rem;}
+
+/* =========================================================
+   12. GALERIA (KARUZELA / ALBUM)
+   ========================================================= */
+.gallery-carousel-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.gallery-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 16px;
+  scrollbar-width: none; /* Firefox */
+}
+.gallery-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.gallery-item{
+  position:relative;
+  flex: 0 0 calc(33.333% - 11px);
+  aspect-ratio: 16/10;
+  overflow:hidden;
+  border-radius:12px;
+  cursor:zoom-in;
+  scroll-snap-align: start;
+  background: var(--color-black-2);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.gallery-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s var(--ease-out), filter .4s ease;
+}
+.gallery-item:hover img{transform:scale(1.08);}
+.gallery-item::after{
+  content:'\f00e';
+  font-family:'Font Awesome 6 Free';
+  font-weight:900;
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.3rem;
+  background:rgba(9,9,11,0);
+  opacity:0;
+  transition:opacity .35s ease, background .35s ease;
+}
+.gallery-item:hover::after{opacity:1;background:rgba(9,9,11,.35);}
+
+.gallery-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+.gallery-btn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-white);
+  background: var(--color-black-2);
+  transition: background .3s ease, border-color .3s ease, transform .3s ease;
+}
+.gallery-btn:hover {
+  background: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-black);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .gallery-item { flex: 0 0 calc(50% - 8px); }
+}
+@media (max-width: 560px) {
+  .gallery-item { flex: 0 0 100%; }
+}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(9,9,11,.94);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;
+  transition:opacity .35s ease, visibility .35s ease;
+  padding:24px;
+}
+.lightbox.is-open{opacity:1;visibility:visible;}
+.lightbox img{max-width:min(90vw, 1100px);max-height:82vh;border-radius:8px;}
+.lightbox-close{
+  position:absolute;top:24px;right:24px;
+  width:46px;height:46px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.1rem;
+  transition:background .3s ease,transform .3s ease;
+}
+.lightbox-close:hover{background:var(--color-white);color:var(--color-black);transform:rotate(90deg);}
+.lightbox-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:52px;height:52px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;
+  transition:background .3s ease, color .3s ease;
+}
+.lightbox-nav:hover{background:var(--color-white);color:var(--color-black);}
+.lightbox-prev{left:24px;}
+.lightbox-next{right:24px;}
+
+/* =========================================================
+   13. ZOBACZ PWF (FILM DOKUMENTALNY) & SHORTSY
+   ========================================================= */
+.docu-section {
+  background: var(--color-black-2);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.docu-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+.docu-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
+}
+.docu-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.docu-content h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 20px;
+}
+.docu-content p {
+  color: var(--color-muted-onblack);
+  font-size: .78rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.shorts-carousel-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.shorts-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+}
+.shorts-track::-webkit-scrollbar {
+  display: none;
+}
+.short-card {
+  position: relative;
+  flex: 0 0 calc(25% - 15px);
+  aspect-ratio: 9/16;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-black-2);
+  border: 1px solid rgba(255,255,255,.12);
+  scroll-snap-align: start;
+  transition: transform .4s var(--ease-out), border-color .3s ease;
+}
+.short-card:hover {
+  border-color: var(--color-white);
+}
+.short-card iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .short-card { flex: 0 0 calc(33.333% - 14px); }
+}
+@media (max-width: 900px) {
+  .docu-container {
+    grid-template-columns: 1fr;
+  }
+  .short-card { flex: 0 0 calc(50% - 10px); }
+}
+@media (max-width: 560px) {
+  .short-card { flex: 0 0 100%; }
+}
+
+/* =========================================================
+   15. KONTAKT
+   ========================================================= */
+.contact-grid{
+  display:flex;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(40px,5vw,80px);
+}
+.contact-info h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+.contact-info > p{color:var(--color-muted-onblack);max-width:46ch;margin-bottom:36px;line-height:1.7;}
+.contact-list{display:flex;flex-direction:column;gap:20px;margin-bottom:40px;}
+.contact-list li{display:flex;align-items:center;gap:16px;font-size:1.05rem;}
+.contact-list i{
+  width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.06);
+  color:var(--accent-yellow);
+}
+.contact-social{display:flex;gap:14px;}
+.contact-social a{
+  width:50px;height:50px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,.18);
+  font-size:1.1rem;
+  transition:background .3s ease, color .3s ease, transform .3s ease;
+}
+.contact-social a[aria-label*="Facebook"]:hover{background:#246EEF;color:#fff;transform:translateY(-4px);}
+.contact-social a[aria-label*="Instagram"]:hover{background:#6434ED;color:#fff;transform:translateY(-4px);}
+.contact-social a[aria-label*="TikTok"]:hover{background:#E63D8A;color:#fff;transform:translateY(-4px);}
+.contact-social a[aria-label*="YouTube"]:hover{background:#F36B0F;color:#fff;transform:translateY(-4px);}
+
+/* =========================================================
+   16. STOPKA
+   ========================================================= */
+.site-footer{
+  padding-block:64px 32px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:48px;
+}
+.footer-brand p{color:var(--color-muted-onblack);font-size:.9rem;line-height:1.7;margin-top:16px;max-width:32ch;}
+.footer-col h4{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted-onblack);margin-bottom:18px;}
+.footer-col ul{display:flex;flex-direction:column;gap:12px;}
+.footer-col a{font-size:.92rem;color:rgba(255,255,255,.75);transition:color .3s ease;}
+.footer-col a:hover{color:var(--color-white);}
+.footer-social{display:flex;gap:10px;}
+.footer-social a{
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.16);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .3s ease, color .3s ease;
+}
+.footer-social a[aria-label*="Facebook"]:hover{background:#246EEF;color:#fff;}
+.footer-social a[aria-label*="Instagram"]:hover{background:#6434ED;color:#fff;}
+.footer-social a[aria-label*="TikTok"]:hover{background:#E63D8A;color:#fff;}
+.footer-social a[aria-label*="YouTube"]:hover{background:#F36B0F;color:#fff;}
+.footer-bottom{
+  display:flex;flex-wrap:wrap;gap:16px;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:28px;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:.82rem;
+  color:var(--color-muted-onblack);
+}
+.footer-bottom a:hover{color:var(--color-white);}
+
+@media (max-width:860px){
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:520px){
+  .footer-top{grid-template-columns:1fr;}
+}
+
+/* =========================================================
+   17. DOPRACOWANIE WIDOKU MOBILNEGO / TABLETOWEGO (RWD)
+   ========================================================= */
+
+/* --- Przyciski: długie etykiety nie mogą "wychodzić" poza ekran --- */
+@media (max-width:640px){
+  .btn{
+    white-space:normal;
+    text-align:center;
+  }
+  .btn-huge{
+    width:100%;
+    max-width:440px;
+    margin-inline:auto;
+    padding:20px 28px;
+    font-size:.95rem;
+    justify-content:center;
+  }
+  .hero-actions{width:100%;}
+  .hero-actions .btn{flex:1 1 auto;justify-content:center;}
+}
+@media (max-width:400px){
+  .hero-actions{flex-direction:column;}
+  .hero-actions .btn{width:100%;}
+}
+
+/* --- HERO: tekst i odstępy trochę mniejsze na wąskich telefonach --- */
+@media (max-width:480px){
+  .hero-inner{padding-bottom:clamp(48px,10vw,80px);}
+  .hero-meta{gap:10px 20px;font-size:.85rem;}
+  .hero-sub{margin-bottom:30px;}
+}
+
+/* --- Logotypy partnerów w rogu hero: kompaktowa wersja na telefonie --- */
+@media (max-width:560px){
+  .hero-top-partners{
+    flex-wrap:wrap;
+    row-gap:10px;
+    column-gap:14px;
+    padding:8px 12px;
+  }
+  .hero-partner-group{
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+    flex:1 1 0;
+    min-width:0;
+  }
+  .hero-partner-text{
+    display:block;
+    font-size:.44rem;
+    text-align:center;
+    white-space:normal;
+    line-height:1.3;
+  }
+  .hero-partner-logos{
+    justify-content:center;
+    width:100%;
+  }
+  .hero-partner-divider{display:none;}
+  .hero-logo-1{height:20px;}
+  .hero-logo-2{height:11px;}
+  .hero-logo-pisf{height:32px;}
+}
+
+/* --- Licznik odliczający: sekcja wyśrodkowana, 4 jednostki w siatce 2x2 --- */
+@media (max-width:480px){
+  .countdown-wrap{
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .countdown-label{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    max-width:100%;
+    text-align:center;
+  }
+  .countdown-timer{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    width:100%;
+    justify-content:center;
+    margin-inline:auto;
+  }
+  .countdown-timer .unit{
+    min-width:0;
+    padding:10px 4px;
+  }
+  .countdown-timer .num{font-size:clamp(1.4rem,7vw,2rem);}
+  .countdown-timer .unit-label{font-size:.6rem;letter-spacing:.08em;}
+}
+
+/* --- Statystyki w sekcji "O warsztatach": wyśrodkowane i swobodnie zawijane --- */
+@media (max-width:860px){
+  .about-stats{
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center;
+    row-gap:24px;
+    column-gap:32px;
+  }
+}
+
+/* --- Nagłówek karty programu: numer dnia i strzałka w jednym rzędzie,
+       tytuł dnia w pełnej szerokości poniżej --- */
+@media (max-width:560px){
+  .program-card-head{
+    flex-wrap:wrap;
+    row-gap:12px;
+    padding:22px 18px;
+  }
+  .program-card-head .day-num{order:1;min-width:0;}
+  .program-card-head .toggle-icon{order:2;margin-left:auto;}
+  .program-card-head .day-title{
+    order:3;
+    flex:0 0 100%;
+    font-size:clamp(1.2rem,5.5vw,1.5rem);
+  }
+}
+
+/* --- Oś czasu programu: godzina nad opisem, czytelniej na wąskim ekranie --- */
+@media (max-width:480px){
+  .timeline{padding-inline:16px;}
+  .timeline-item{
+    grid-template-columns:1fr;
+    gap:6px;
+    padding-block:16px;
+  }
+  .timeline-item .time{font-size:.85rem;}
+}
+
+/* --- Lokalizacja: niższa mapa/zdjęcie, żeby nie zajmowały całego ekranu --- */
+@media (max-width:560px){
+  .location-map{height:220px;}
+  .location-photo{min-height:220px;}
+}
+
+/* --- Sekcja "Zobacz PWF" / shortsy: mniejszy opis na wąskim ekranie --- */
+@media (max-width:480px){
+  .docu-content p{font-size:.85rem;}
+}
+
+/* --- FAQ: mniejszy odstęp pytanie/ikona, żeby tekst miał więcej miejsca --- */
+@media (max-width:480px){
+  .faq-q{gap:12px;font-size:.98rem;padding-block:22px;}
+}
+</style>
+</head>
+<body>
+
+<a href="/#main" class="skip-link">Przejdź do treści</a>
+
+<!-- GRAIN OVERLAY -->
+<div class="grain" aria-hidden="true" style="position:fixed;"></div>
+
+<!-- NAWIGACJA MOBILNA / NAGłÓWEK -->
+<header class="site-header" id="siteHeader">
+  <a href="/" class="logo" aria-label="Poznańskie Warsztaty Filmowe — strona główna">
+    <img src="https://ik.imagekit.io/pwfpoznan/02.%20IQL%20-%20PWF%20-%20LOGO%20-%20BIA%C5%81E.png?updatedAt=1784768917058" alt="PWF Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+  </a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mainNav">
+    <span></span>
+  </button>
+</header>
+
+<!-- MENU GŁÓWNE (STAŁY PASEK BOCZNY) -->
+<nav class="main-nav" id="mainNav" aria-label="Menu główne">
+  <a href="/#hero" class="logo nav-logo" aria-label="Poznańskie Warsztaty Filmowe — strona główna">
+    <img src="https://ik.imagekit.io/pwfpoznan/02.%20IQL%20-%20PWF%20-%20LOGO%20-%20BIA%C5%81E.png?updatedAt=1784768917058" alt="PWF Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+  </a>
+
+  <ul>
+      <li><a href="/#o-warsztatach" data-nav style="--square-color:var(--accent-blue);"><span class="nav-square-top"><span>01</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></span><span class="nav-square-label">O warsztatach</span></a></li>
+      <li><a href="/#program" data-nav style="--square-color:var(--accent-violet);"><span class="nav-square-top"><span>02</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></span><span class="nav-square-label">Program</span></a></li>
+      <li><a href="/#organizatorzy" data-nav style="--square-color:var(--accent-magenta);"><span class="nav-square-top"><span>03</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></span><span class="nav-square-label">Organizatorzy</span></a></li>
+      <li><a href="/#galeria" data-nav style="--square-color:var(--accent-orange);"><span class="nav-square-top"><span>04</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></span><span class="nav-square-label">Galeria</span></a></li>
+      <li><a href="/#kontakt" data-nav style="--square-color:var(--accent-yellow);"><span class="nav-square-top"><span>05</span><i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></span><span class="nav-square-label">Kontakt</span></a></li>
+      <li><a href="/#zapisy" class="btn btn-primary">Zapisz się</a></li>
+  </ul>
+
+  <div class="nav-menu-social" aria-label="Media społecznościowe PWF">
+    <a href="#" aria-label="Instagram PWF"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+    <a href="#" aria-label="Facebook PWF"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+    <a href="#" aria-label="TikTok PWF"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+    <a href="#" aria-label="YouTube PWF"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <canvas id="gradient"></canvas>
+    </div>
+
+    <!-- PRAWY GÓRNY RÓG - LOGOTYPY PARATNERÓW I ORGANIZATORÓW -->
+    <div class="hero-top-partners">
+      <div class="hero-partner-group">
+        <span class="hero-partner-text">Projekt organizowany przez</span>
+        <div class="hero-partner-logos">
+          <a href="https://cineostudio.wixsite.com/cineostudio" target="_blank" rel="noopener noreferrer" aria-label="CineoStudio - strona organizatora">
+            <img src="https://ik.imagekit.io/pwfpoznan/b17aca_fdd7916e02694c8784dba43ebd90369b~mv2-2.png?updatedAt=1784669055858" alt="Logo organizatora 1" class="hero-logo-1">
+          </a>
+          <a href="https://prequelstudio.pl" target="_blank" rel="noopener noreferrer" aria-label="Prequel Studio - strona organizatora">
+            <img src="https://ik.imagekit.io/pwfpoznan/PQL%20Logo%20W.png" alt="Logo organizatora 2" class="hero-logo-2">
+          </a>
+        </div>
+      </div>
+      <div class="hero-partner-divider"></div>
+      <div class="hero-partner-group">
+        <span class="hero-partner-text">Projekt finansowany przez</span>
+        <div class="hero-partner-logos">
+          <img src="https://ik.imagekit.io/pwfpoznan/PISF_log1pol-og.png?updatedAt=1784671156217" alt="Logo PISF" class="hero-logo-pisf">
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-inner">
+      <p class="hero-kicker">10–12 stycznia 2027 · Poznań</p>
+      <h1 class="hero-title">Poznańskie Warsztaty Filmowe</h1>
+      <p class="hero-sub">3 dni praktycznych zajęć, pracy zespołowej i nauki od profesjonalistów. Ucz się od ekspertów branży, zdobywaj doświadczenie i rozwijaj swoje umiejętności.</p>
+
+      <ul class="hero-meta">
+        <li><i class="fa-regular fa-calendar" aria-hidden="true"></i> 10–12 stycznia 2027</li>
+        <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Nobel Tower, Poznań (Dzień 1 i 3) oraz GPD Film Studio (Dzień 2)</li>
+      </ul>
+
+      <div class="hero-actions">
+        <a href="/#zapisy" class="btn btn-primary">Zapisz się</a>
+        <a href="/#program" class="btn btn-outline2">Poznaj program</a>
+      </div>
+    </div>
+
+    <div class="hero-social" aria-label="Media społecznościowe PWF">
+      <a href="#" aria-label="Instagram PWF"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Facebook PWF"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+      <a href="#" aria-label="TikTok PWF"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+      <a href="#" aria-label="YouTube PWF"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-label">Scroll</span>
+      <span class="mouse"><span class="dot"></span></span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee-section" aria-label="Najważniejsze informacje o warsztatach">
+    <div class="marquee-track" aria-hidden="true">
+      <span class="marquee-item"><i class="fa-solid fa-video" aria-hidden="true"></i>Praktyczna nauka</span>
+      <span class="marquee-item"><i class="fa-solid fa-clapperboard" aria-hidden="true"></i>Produkcja filmowa</span>
+      <span class="marquee-item"><i class="fa-solid fa-user-tie" aria-hidden="true"></i>Eksperci branży</span>
+      <span class="marquee-item"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i>3 dni warsztatów</span>
+      <span class="marquee-item"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Realne doświadczenie</span>
+      <span class="marquee-item"><i class="fa-solid fa-video" aria-hidden="true"></i>Praktyczna nauka</span>
+      <span class="marquee-item"><i class="fa-solid fa-clapperboard" aria-hidden="true"></i>Produkcja filmowa</span>
+      <span class="marquee-item"><i class="fa-solid fa-user-tie" aria-hidden="true"></i>Eksperci branży</span>
+      <span class="marquee-item"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i>3 dni warsztatów</span>
+      <span class="marquee-item"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Realne doświadczenie</span>
+    </div>
+  </section>
+
+  <!-- LICZNIK ZAPISÓW -->
+  <section class="countdown-section">
+    <div class="container countdown-wrap">
+      <p class="countdown-label">Zapisy na Poznańskie Warsztaty Filmowe trwają jeszcze:</p>
+      <div class="countdown-timer" id="countdownTimer" role="timer" aria-live="off">
+        <div class="unit"><span class="num" id="cd-days">00</span><span class="unit-label">dni</span></div>
+        <div class="unit"><span class="num" id="cd-hours">00</span><span class="unit-label">godz.</span></div>
+        <div class="unit"><span class="num" id="cd-minutes">00</span><span class="unit-label">min.</span></div>
+        <div class="unit"><span class="num" id="cd-seconds">00</span><span class="unit-label">sek.</span></div>
+      </div>
+      <p class="countdown-closed" id="countdownClosed">Zapisy zostały zakończone.</p>
+    </div>
+  </section>
+
+<!-- O WARSZTATACH -->
+  <section class="section" id="o-warsztatach">
+    <div class="container">
+      
+<!-- TYTUŁ NA PEŁNĄ SZEROKOŚĆ SEKCJI -->
+      <div class="about-header reveal" style="margin-bottom: 2.5rem;">
+        <p class="eyebrow" style="--eyebrow-accent:var(--accent-blue);">O warsztatach</p>
+        <h2 class="section-title" style="max-width: 100%; font-size: clamp(1.4rem, 3vw, 2.6rem);">
+          "W filmie nie ma zasad. Są tylko grzechy. A największym grzechem jest nuda"
+          <small style="font-size: 0.4em; font-weight: 500; opacity: 0.65; display: inline; vertical-align: baseline; margin-left: 12px; white-space: nowrap;">~ Frank Capra</small>
+        </h2>
+      </div>
+
+      <!-- PODZIELONA RESZTA SEKCJI (LEWA: TEKST, PRAWA: ZDJĘCIE) -->
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>Film najlepiej poznaje się poprzez działanie. Dlatego Poznańskie Warsztaty Filmowe stawiają na praktykę, współpracę i zdobywanie doświadczenia. Przez trzy intensywne dni uczestnicy poznają kolejne etapy produkcji filmowej – od rozwijania pomysłu i tworzenia dokumentacji, przez scenografię, kostiumy oraz pracę z kamerą i oświetleniem, aż po organizację produkcji i rozwój projektu filmowego. </p>
+          <p>Zajęcia prowadzą doświadczeni praktycy branży filmowej, m.in. Kamil Przełęcki, Andrzej Wolf i Justyna Kuczyniecka, którzy na co dzień realizują profesjonalne produkcje i dzielą się swoją wiedzą podczas warsztatów. Uczestnicy pracują w zespołach, rozwiązują realne wyzwania produkcyjne i poznają, jak wygląda współpraca na planie zdjęciowym. </p>
+          <p>To propozycja dla wszystkich, którzy chcą rozwinąć swoją kreatywność, zdobyć praktyczne umiejętności i zobaczyć, jak naprawdę powstaje film – od pierwszej idei do wspólnie wypracowanego projektu.</p>
+          <div class="about-stats">
+            <div><div class="stat-num">3</div><div class="stat-label">dni warsztatów</div></div>
+            <div><div class="stat-num">30</div><div class="stat-label">miejsc</div></div>
+            <div><div class="stat-num">5</div><div class="stat-label">ekspertów</div></div>
+            <div><div class="stat-num">1</div><div class="stat-label">premiera</div></div>
+          </div>
+        </div>
+        <div class="about-media reveal reveal-delay-1">
+          <img src="images/about-workshops.jpg" alt="Uczestnicy warsztatów filmowych PWF pracujący na planie zdjęciowym" onerror="this.src='https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80'">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DLA KOGO -->
+  <section class="section section--light">
+    <div class="container">
+      <p class="eyebrow" style="--eyebrow-accent:var(--accent-violet);">Dla kogo</p>
+      <h2 class="section-title">Warsztaty dla każdego etapu drogi filmowej</h2>
+
+      <div class="tiles-grid">
+        <div class="tile reveal">
+          <div class="tile-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
+          <h3>Początkujący</h3>
+          <p>Osoby stawiające pierwsze kroki w filmowaniu, które chcą poznać podstawy warsztatu w praktyce.</p>
+        </div>
+        <div class="tile reveal reveal-delay-1">
+          <div class="tile-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+          <h3>Studenci</h3>
+          <p>Studenci kierunków filmowych, medialnych i artystycznych szukający doświadczenia produkcyjnego.</p>
+        </div>
+        <div class="tile reveal reveal-delay-2">
+          <div class="tile-icon"><i class="fa-solid fa-clapperboard" aria-hidden="true"></i></div>
+          <h3>Filmowcy</h3>
+          <p>Twórcy z doświadczeniem, którzy chcą rozwinąć konkretne umiejętności produkcyjne.</p>
+        </div>
+        <div class="tile reveal">
+          <div class="tile-icon"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i></div>
+          <h3>Fotografowie</h3>
+          <p>Osoby pracujące z obrazem, które chcą przejść od fotografii do języka ruchomego kadru.</p>
+        </div>
+        <div class="tile reveal reveal-delay-1">
+          <div class="tile-icon"><i class="fa-solid fa-hashtag" aria-hidden="true"></i></div>
+          <h3>Twórcy internetowi</h3>
+          <p>Twórcy contentu wideo, którzy chcą podnieść jakość realizacji swoich materiałów.</p>
+        </div>
+        <div class="tile reveal reveal-delay-2">
+          <div class="tile-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></div>
+          <h3>Pasjonaci filmu</h3>
+          <p>Widzowie i entuzjaści kina, którzy chcą raz spojrzeć na film od strony planu zdjęciowego.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CO OBEJMUJE UDZIAŁ -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="--eyebrow-accent:var(--accent-magenta);">Co obejmuje udział</p>
+      <h2 class="section-title">Przygotowaliśmy wszystko, czego potrzebujesz</h2>
+
+      <div class="feature-cards">
+        <div class="feature-card reveal">
+          <div class="feature-card-media">
+            <img src="https://images.unsplash.com/photo-1612544409025-e1f6a56c1152?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profesjonalny sprzęt filmowy dostępny na warsztatach PWF" onerror="this.src='https://unsplash.com/photos/clap-board-roadside-jakob-and-ryan-CiUR8zISX60'">
+          </div>
+          <div class="feature-card-body">
+            <h3>Profesjonalne zaplecze</h3>
+            <p class="subtitle">W pełni zapewnione</p>
+            <ul>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Profesjonalny sprzęt filmowy</li>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Materiały do pracy warsztatowej</li>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Przestrzenie dostosowane do pracy</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-card-media">
+            <img src="https://images.unsplash.com/photo-1544618869-f9a365fc4526?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mentor PWF pracujący indywidualnie z uczestnikiem warsztatów" onerror="this.src='https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=600&q=80'">
+          </div>
+          <div class="feature-card-body">
+            <h3>Doświadczeni eksperci</h3>
+            <p class="subtitle">Ucz się od praktyków branży</p>
+            <ul>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Wiedza oparta na doświadczeniu</li>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Bezpośredni kontakt z prowadzącymi</li>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Wsparcie w ćwiczeniach</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-card-media">
+            <img src="https://images.unsplash.com/photo-1587554801262-e074b7d300e3?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Elastyczny harmonogram warsztatów filmowych PWF" onerror="this.src='https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80'">
+          </div>
+          <div class="feature-card-body">
+            <h3>Komfort uczestników</h3>
+            <p class="subtitle">Skup się na nauce</p>
+            <ul>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Przerwy kawowe</li>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Przyjazna atmosfera pracy</li>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Moliwość networkingu</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card-media">
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1718&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sala kinowa przygotowana na pokaz finałowy filmów uczestników PWF" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80'">
+          </div>
+          <div class="feature-card-body">
+            <h3>Bezpłatny udział</h3>
+            <p class="subtitle">Pełne wsparcie organizacyjne</p>
+            <ul>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Udział bez żadnych opłat</li>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Certyfikat uczestnictwa</li>
+              <li><i class="fa-solid fa-circle" aria-hidden="true"></i>Trzy dni intensywnych warsztatów</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="section" id="program">
+    <div class="container">
+      <p class="eyebrow" style="--eyebrow-accent:var(--accent-yellow);">Harmonogram</p>
+      <h2 class="section-title">Program warsztatów dzień po dniu</h2>
+
+      <div class="program-list">
+        <!-- Dzień 1 -->
+        <div class="program-card">
+          <div class="program-card-head">
+            <span class="day-num">Dzień 1</span>
+            <span class="day-title">Od pomysłu do historii</span>
+            <span class="day-focus">Piątek, 10 stycznia</span>
+            <div class="toggle-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="program-card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="time">10:00 - 10:15</span>
+                <div>
+                  <span class="type-tag type-organizacja">Organizacja</span>
+                  <h4>Oficjalne powitanie i rozpoczęcie</h4>
+                  <p>Przywitanie uczestników wydarzenia i przedstawienie planu wydarzenia.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">10:15 - 13:30</span>
+                <div>
+                  <span class="type-tag type-warsztat">Warsztat</span>
+                  <h4>Integracja całej ekipy warsztatowej</h4>
+                  <p>Warsztaty integracyjne rozwijające kreatywność, komunikację i współpracę – fundament pracy kadej ekipy.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">13:30 - 13:45</span>
+                <div>
+                  <span class="type-tag type-przerwa">Przerwa</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">13:45 - 16:40</span>
+                <div>
+                  <span class="type-tag type-warsztat">Warsztat</span>
+                  <h4>Dokumentacja filmowa</h4>
+                  <p>Narzędzia developmentu filmu, praca w grupach nad one-pager oraz kartami postaci oraz prezentacja pomysłów.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">16:40 - 16:50</span>
+                <div>
+                  <span class="type-tag type-organizacja">Organizacja</span>
+                  <h4>Zakończenie 1 dnia warsztatów</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dzień 2 -->
+        <div class="program-card">
+          <div class="program-card-head">
+            <span class="day-num">Dzień 2</span>
+            <span class="day-title">Filmowe rzemiosło</span>
+            <span class="day-focus">Sobota, 11 stycznia</span>
+            <div class="toggle-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="program-card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="time">10:00 - 10:10</span>
+                <div>
+                  <span class="type-tag type-organizacja">Organizacja</span>
+                  <h4>Oficjalne powitanie i rozpoczęcie</h4>
+                  <p>Przywitanie uczestników, przedstawienie agendy dnia, podział na grupy i przywitanie eksperta.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">10:10 - 11:55</span>
+                <div>
+                  <span class="type-tag type-warsztat">Warsztat</span>
+                  <h4>Kostiumy, prowadzi: Kostiumograf</h4>
+                  <p>Jak kostium buduje charakter postaci i wpływa na opowiadaną historię, pracując pod okiem kostiumografki.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">11:55 - 14:00</span>
+                <div>
+                  <span class="type-tag type-warsztat">Warsztat</span>
+                  <h4>Scenografia, prowadzi: Justyna Kuczyniewska</h4>
+                  <p>Rola scenografii w filmie i praca nad scenografią z ekspertem.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">14:00 - 14:30</span>
+                <div>
+                  <span class="type-tag type-przerwa">Przerwa</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">14:30 - 17:45</span>
+                <div>
+                  <span class="type-tag type-warsztat">Warsztat</span>
+                  <h4>Kamera i oświetlenie, prowadzą: Andrzej Wolff, Oświetlacz</h4>
+                  <p>Zajęcia z pracy z kamerą, kadrowania oraz profesjonalnego oświetlenia wykorzystywanego na planach filmowych.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">17:45 - 17:55</span>
+                <div>
+                  <span class="type-tag type-organizacja">Organizacja</span>
+                  <h4>Zakończenie 2 dnia warsztatów</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dzień 3 -->
+        <div class="program-card">
+          <div class="program-card-head">
+            <span class="day-num">Dzień 3</span>
+            <span class="day-title">Produckja w praktyce</span>
+            <span class="day-focus">Niedziela, 12 stycznia</span>
+            <div class="toggle-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="program-card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="time">10:00 - 10:10</span>
+                <div>
+                  <span class="type-tag type-organizacja">Organizacja</span>
+                  <h4>Oficjalne powitanie i rozpoczęcie</h4>
+                  <p>Przywitanie uczestników, przedstawienie agendy dnia i przywitanie eksperta.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">10:10 - 12:20</span>
+                <div>
+                  <span class="type-tag type-wyklad">Wykład</span>
+                  <h4>Produkcja w praktyce</h4>
+                  <p>Poznanie organizacji produkcji filmowej oraz ról w pionach produkcyjnych.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">12:20 - 12:35</span>
+                <div>
+                  <span class="type-tag type-przerwa">Przerwa</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">12:35 - 16:00</span>
+                <div>
+                  <span class="type-tag type-warsztat">Warsztat</span>
+                  <h4>Rozwój projektu filmowego</h4>
+                  <p>Praca zespołowa nad projektem filmu z konsultacjami specjalistów z rónych pionów.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">16:00 - 16:20</span>
+                <div>
+                  <span class="type-tag type-przerwa">Przerwa</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">16:20 - 17:50</span>
+                <div>
+                  <span class="type-tag type-warsztat">Warsztat</span>
+                  <h4>Analiza i prezentacja projektu</h4>
+                  <p>Wspólna analiza efektów pracy, wymiana doświadczeń oraz omówienie projektu z prowadzącymi i uczestnikami.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">17:50 - 18:00</span>
+                <div>
+                  <span class="type-tag type-organizacja">Organizacja</span>
+                  <h4>Zakończenie warsztatów</h4>
+                  <p>Oficjalne zakończenia dnia 3 i warsztatów.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PREMIERA -->
+        <div class="program-card">
+          <div class="program-card-head">
+            <span class="day-num">Premiera</span>
+            <span class="day-title">Premiera filmu dokumentalnego</span>
+            <span class="day-focus">Sobota, 13 lutego</span>
+            <div class="toggle-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="program-card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="time">16:00 - 16:15</span>
+                <div>
+                  <span class="type-tag type-organizacja">Organizacja</span>
+                  <h4>Oficjalne powitanie i rozpoczęcie</h4>
+                  <p>Przywitanie gości i oficjalne rozpoczęcie wydarzenia.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">16:15 - 17:00</span>
+                <div>
+                  <span class="type-tag type-warsztat">Panel</span>
+                  <h4>Panel z ekspertami</h4>
+                  <p>Panel z ekspertami biorącymi udział w warsztatach – omówienie poznańskiego potencjału filmowego.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">17:00 - 17:30</span>
+                <div>
+                  <span class="type-tag type-pokaz">Pokaz</span>
+                  <h4>Pokaz Finałowy w Sali Kinowej</h4>
+                  <p>Uroczysta premiera filmu dokumentalnego o warsztatach i uczestnikach.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">17:30 - 17:50</span>
+                <div>
+                  <span class="type-tag type-warsztat">Networking</span>
+                  <h4>Czas na networking</h4>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">17:50 - 18:00</span>
+                <div>
+                  <span class="type-tag type-organizacja">Organizacja</span>
+                  <h4>Zakończenie premiery</h4>
+                  <p>Uroczyste zakończenie wydarzenia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- LOKALIZACJA (ZMODYFIKOWANA) -->
+  <section class="section section--light" id="lokalizacja">
+    <div class="container location-wrapper">
+      <div style="text-align: left; max-width: 800px; margin-bottom: 10px;">
+        <p class="eyebrow" style="--eyebrow-accent:var(--accent-orange); justify-content: center;">Miejsce</p>
+        <h2 class="section-title" style="max-width: 100%; margin-bottom: 12px;">Lokalizacje warsztatów</h2>
+        <p style="color: #4B5563; font-size: 1.05rem; line-height: 1.6;">Warsztaty odbywają się w dwóch różnych punktach Poznania.</p>
+      </div>
+
+<!-- LOKALIZACJA 1 (Dzień 1 i 3) -->
+      <div class="location-grid">
+        <div class="location-info">
+          
+          <!-- DODANY KONTENER TYLKO DLA ETYKIET -->
+          <div style="display: flex; flex-direction: row; gap: 12px; margin-bottom: 16px;">
+            <span class="location-badge" style="margin: 0;"><i class="fa-solid fa-calendar-day"></i> Dzień 1 </span>
+            <span class="location-badge" style="margin: 0; color: var(--accent-violet); background: #6434ed1a;"><i class="fa-solid fa-calendar-day"></i> Dzień 3 </span>
+          </div>
+
+          <h3 style="font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 16px; color: var(--color-black);">Nobel Tower – Sala Nobla    </h3>
+          <p class="location-address" style="color: #4B5563;">
+            ul. Dąbrowskiego 77A<br>
+            60-529 Poznań<br>
+            Polska
+          </p>
+          <div class="location-map">
+            <iframe title="Mapa Nobel Tower" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.2!2d16.9038!3d52.4145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4702a4b62e36d285%3A0x5b2337dd9d7940c6!2sNobel%20Tower!5e0!3m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="location-photo">
+          <img src="https://ik.imagekit.io/pwfpoznan/Sala-Nobla%20Cropped-2.jpg" alt="Nobel Tower – Sala Konferencyjna Nobla">
+        </div>
+      </div>
+
+      <!-- LOKALIZACJA 2 (Dzień 2) -->
+      <div class="location-grid reverse">
+        <div class="location-info">
+          <span class="location-badge" style="color: var(--accent-magenta); background: #e63d8a1a;"><i class="fa-solid fa-calendar-day"></i> Dzień 2 </span>
+          <h3 style="font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 16px; color: var(--color-black);">GPD Film Studio</h3>
+          <p class="location-address" style="color: #4B5563;">
+            ul. Św. Antoniego 8<br>
+            62-080 Swadzim<br>
+            Polska
+          </p>
+          <div class="location-map">
+            <iframe title="Mapa GPD Film Studio" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.2!2d16.7441!3d52.4333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470246c502661131%3A0x57c9945b05355564!2sGPD%20Film%20Studio!5e0!3m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="location-photo">
+          <img src="https://ik.imagekit.io/pwfpoznan/491417438_18500808322000431_7200747863509944267_n.jpeg" alt="GPD Film Studio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIZATORZY -->
+  <section class="section section--light" id="organizatorzy">
+    <div class="container">
+      <p class="eyebrow" style="--eyebrow-accent:var(--accent-blue);">Organizatorzy</p>
+      <h2 class="section-title">Zespół PWF</h2>
+
+      <div class="people-grid">
+        <div class="person-card reveal">
+          <div class="person-photo">
+            <img src="https://ik.imagekit.io/pwfpoznan/Kamil%20Prze%C5%82e%CC%A8cki.jpg" alt="Kamil Przełęcki" onerror="this.src='https://ik.imagekit.io/pwfpoznan/Kamil%20Prze%C5%82e%CC%A8cki.jpg'">
+          </div>
+          <h3>Kamil Przełęcki</h3>
+          <p class="role">Producent wiodący</p>
+        </div>
+        <div class="person-card reveal reveal-delay-2">
+          <div class="person-photo">
+            <img src="https://ik.imagekit.io/pwfpoznan/PQL%20-%20OSTATNI%20Z%CC%87ART%20-%20FOTOS%20-%20D4%20-%20HUBERT%20MIKA%20-%2032-3-2-2.jpg" alt="Mateusz Włodkowski" onerror="this.src='https://ik.imagekit.io/pwfpoznan/PQL%20-%20OSTATNI%20Z%CC%87ART%20-%20FOTOS%20-%20D4%20-%20HUBERT%20MIKA%20-%2032-3-2-2.jpg'">
+          </div>
+          <h3>Mateusz Włodkowski</h3>
+          <p class="role">Producent wykonawczy</p>
+        </div>
+        <div class="person-card reveal reveal-delay-1">
+          <div class="person-photo">
+            <img src="https://ik.imagekit.io/pwfpoznan/ela.png" alt="Elzbieta Stachowiak-Dudzik" onerror="this.src='https://ik.imagekit.io/pwfpoznan/ela.png'">
+          </div>
+          <h3>Elbieta Stachowiak-Dudzik</h3>
+          <p class="role">Prodcuent wykonawczy</p>
+        </div>
+        <div class="person-card reveal reveal-delay-3">
+          <div class="person-photo">
+            <img src="https://ik.imagekit.io/pwfpoznan/IMG_8152-2.jpg" alt="Hubert Włodkowski" onerror="this.src='https://ik.imagekit.io/pwfpoznan/IMG_8152-2.jpg'">
+          </div>
+          <h3>Hubert Włodkowski</h3>
+          <p class="role">Producent wykonawczy</p>
+        </div>
+      </div>
+
+      <!-- MIEJSCE NA DWA LOGO POD ZDJĘCIAMI ORGANIZATORÓW -->
+      <div class="organizers-logos reveal">
+        <div class="organizers-logos-grid">
+            <div class="organizer-logo-box">
+  <img src="https://ik.imagekit.io/pwfpoznan/b17aca_fdd7916e02694c8784dba43ebd90369b~mv2-2.png" alt="Cineo studio" style="max-height: 110%;">
+</div>
+<div class="organizer-logo-box">
+  <img src="https://ik.imagekit.io/pwfpoznan/PISF_log1pol-og.png" alt="PISF" style="max-height: 140%;">
+</div>
+<div class="organizer-logo-box">
+  <img src="https://ik.imagekit.io/pwfpoznan/logo%20pql.png" alt="Prequel Studio" style="max-height: 60%;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- PARTNERZY -->
+  <section class="section section--light" id="partnerzy">
+    <div class="container">
+      <p class="eyebrow" style="--eyebrow-accent:var(--accent-violet);">Wsparcie</p>
+      <h2 class="section-title">Partnerzy i sponsorzy</h2>
+
+      <div class="partners-grid">
+        <div class="partner-cell">
+          <img src="https://ik.imagekit.io/pwfpoznan/output-onlinepngtools.png" alt="GPD">
+        </div>
+        <div class="partner-cell">
+          <img src="https://ik.imagekit.io/pwfpoznan/images-2.png" alt="CINEO PUBLISHING">
+        </div>
+        <div class="partner-cell">
+          <img src="https://ik.imagekit.io/pwfpoznan/logonobel2.png" alt="NOBEL TOWER">
+        </div>
+        <div class="partner-cell">
+          <img src="https://ik.imagekit.io/pwfpoznan/favicon-512.png" alt="2K4K">
+        </div>
+        <div class="partner-cell">
+          <img src="https://ik.imagekit.io/pwfpoznan/ledbim_logo.png" alt="LEDBIM">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA (KARUZELA / ALBUM) -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <p class="eyebrow" style="--eyebrow-accent:var(--accent-magenta);">Galeria</p>
+      <h2 class="section-title">Galeria foto</h2>
+
+      <div class="gallery-carousel-wrap">
+        <div class="gallery-track" id="galleryTrack">
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80" alt="Praca na planie"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Reżyser przy pracy"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Montaż wideo"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80" alt="Kino i światło"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80" alt="Sala kinowa"></div>
+          <!-- Dodatkowe zdjęcia możliwe do łatwego rozszerzenia -->
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80" alt="Kino i publiczność"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80" alt="Plan zdjęciowy"></div>
+        </div>
+      </div>
+      <div class="gallery-controls">
+        <button class="gallery-btn" id="galleryPrev" aria-label="Poprzednie zdjęcia"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="gallery-btn" id="galleryNext" aria-label="Następne zdjęcia"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKCJA 1: ZOBACZ PWF (FILM DOKUMENTALNY) -->
+  <section class="section docu-section">
+    <div class="container docu-container">
+      <div class="docu-content reveal">
+        <p class="eyebrow" style="--eyebrow-accent:var(--accent-orange);">Film dokumentalny</p>
+        <h2 class="section-title">Zobacz PWF od kulis</h2>
+        <p style="font-size: 1.0rem;">Poznaj atmosferę panującą podczas Poznańskich Warsztatów Filmowych. Zobacz, jak uczestnicy wspólnie z mentorami przechodzą drogę od pierwszego pomysłu na scenariusz, aż po profesjonalny plan zdjęciowy i montaż.</p>
+      </div>
+      <div class="docu-video-wrapper reveal reveal-delay-1">
+          <iframe src="https://www.youtube-nocookie.com/embed/JwbMKX7RcCM" title="PWF Short 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKCJA 2: SHORTSY -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="--eyebrow-accent:var(--accent-yellow);">Rolki i Shortsy</p>
+      <h2 class="section-title">Chwile z planu w pigułce</h2>
+      <div class="shorts-carousel-wrap">
+        <div class="shorts-track" id="shortsTrack">
+          <div class="short-card reveal">
+            <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="PWF Short 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="short-card reveal reveal-delay-1">
+            <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="PWF Short 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="short-card reveal reveal-delay-2">
+            <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="PWF Short 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="short-card reveal">
+            <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="PWF Short 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="short-card reveal">
+            <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="PWF Short 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-controls">
+        <button class="gallery-btn" id="shortsPrev" aria-label="Poprzednie rolki"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="gallery-btn" id="shortsNext" aria-label="Następne rolki"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--light" id="faq">
+    <div class="container">
+      <p class="eyebrow" style="--eyebrow-accent:var(--accent-blue);">Pytania i odpowiedzi</p>
+      <h2 class="section-title" style="text-align:center; margin-inline:auto;">Często zadawane pytania</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Czy muszę mieć własny sprzęt?</span>
+            <div class="plus"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Tak, warunkiem udziału w warsztatach jest posiadanie własnego <strong>laptopa / tablet</strong> oraz <strong>konto Google</strong>. Pozostały sprzęt oraz materiały niezbędne do realizacji zajęć zapewnia organizator.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Czy udział w warsztatach jest bezpłatny?</span>
+            <div class="plus"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Tak. Udział w Poznańskich Warsztatach Filmowych jest całkowicie bezpłatny. Uczestnicy nie ponoszą żadnych kosztów związanych z udziałem w wydarzeniu.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Do kogo są przeznaczone warsztaty?</span>
+            <div class="plus"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Warsztaty skierowane są do osób zainteresowanych światem filmu – zarówno tych, którzy stawiają pierwsze kroki, jak i chcą rozwinąć swoje dotychczasowe umiejętności.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>Co zapewniamy uczestnikom?</span>
+            <div class="plus"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Zapewniamy udział we wszystkich warsztatach, opiekę prowadzących, profesjonalne zaplecze niezbędne do realizacji zajęć oraz catering kawowy.</p>
+          </div>
+        </div>
+
+                <div class="faq-item">
+          <div class="faq-q">
+            <span>Jak mogę się zapisać?</span>
+            <div class="plus"><i class="fa-solid fa-plus" aria-hidden="true"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Rekrutacja odbywa się poprzez formularz zgłoszeniowy dostępny na stronie internetowej. Liczba miejsc jest ograniczona, dlatego warto zgłośić się jak najwcześniej.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAPISY (CTA) -->
+  <section class="section signup-section" id="zapisy">
+    <div class="container">
+      <h2>Dołącz do najbliższej edycji PWF</h2>
+      <p>Liczba miejsc jest ograniczona do 30 osób ze względu na komfort pracy w kameralnych grupach na planie.</p>
+      <a href="https://forms.gle/" target="_blank" rel="noopener" class="btn btn-primary btn-huge">Wypełnij formularz zgłoszeniowy</a>
+    </div>
+  </section>
+  
+  <!-- KONTAKT -->
+  <section class="section" id="kontakt">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow" style="--eyebrow-accent:var(--accent-violet);">Kontakt</p>
+        <h2>Masz pytania? Napisz do nas</h2>
+        <p>Jesteśmy do Twojej dyspozycji w sprawach organizacyjnych, programowych i sprzętowych.</p>
+
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> kontakt@pwfpoznan.pl</li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> +48 123 456 789</li>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Poznań, Polska</li>
+        </ul>
+
+        <div class="contact-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- STOPKA -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Poznańskie Warsztaty Filmowe">
+          <img src="https://ik.imagekit.io/pwfpoznan/02.%20IQL%20-%20PWF%20-%20LOGO%20-%20BIA%C5%81E.png?updatedAt=1784768917058" alt="PWF Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        </a>
+        <p>Poznańskie Warsztaty Filmowe — praktyczne warsztaty dla przyszłych i obecnych filmowców.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Nawigacja</h4>
+        <ul>
+          <li><a href="/#o-warsztatach">O warsztatach</a></li>
+          <li><a href="/#program">Program</a></li>
+          <li><a href="/#organizatorzy">Organizatorzy</a></li>
+          <li><a href="/#zapisy">Zapisy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informacje</h4>
+        <ul>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#galeria">Galeria</a></li>
+          <li><a href="/#kontakt">Kontakt</a></li>
+          <li><a href="/Regulamin">Regulamin warsztatów</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Social Media</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026-2027 Poznańskie Warsztaty Filmowe (PWF). Wszelkie prawa zastrzeżone.</p>
+      <div>
+        <a href="/polityka">Polityka Prywatności</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX DLA GALERII -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij galerię">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Poprzednie zdjęcie">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <img id="lightboxImg" src="" alt="Powiększone zdjęcie z galerii">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Następne zdjęcie">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>
+
+<!-- =========================================================
+     SKRYPTY JAVASCRIPT (W PEŁNI UKOŃCZONE)
+     ========================================================= -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+<!-- Import Neat Gradient przez ESM / Skypack dla przeglądarki -->
+<script type="module">
+  import { NeatGradient } from "https://cdn.skypack.dev/@firecms/neat";
+
+  const config = {
+      colors: [
+          { color: '#246EEF', enabled: true },
+          { color: '#6434ED', enabled: true },
+          { color: '#E63D8A', enabled: true },
+          { color: '#09090B', enabled: true },
+          { color: '#F36B0F', enabled: true },
+          { color: '#FACC15', enabled: true },
+      ],
+    speed: 2.5,
+    horizontalPressure: 3,
+    verticalPressure: 4,
+    waveFrequencyX: 2,
+    waveFrequencyY: 3,
+    waveAmplitude: 5,
+    shadows: 1,
+    highlights: 5,
+    colorBrightness: 1,
+    colorSaturation: 7,
+    wireframe: false,
+    colorBlending: 8,
+    backgroundColor: '#003FFF',
+    backgroundAlpha: 1,
+    grainScale: 0,
+    grainSparsity: 0,
+    grainIntensity: 0,
+    grainSpeed: 1,
+    resolution: 1,
+    yOffset: 1473,
+    yOffsetWaveMultiplier: 4,
+    yOffsetColorMultiplier: 4,
+    yOffsetFlowMultiplier: 4,
+    flowDistortionA: 3.7,
+    flowDistortionB: 0.8,
+    flowScale: 1.6,
+    flowEase: 0.32,
+    flowEnabled: true,
+    enableProceduralTexture: false,
+    transparentTextureVoid: false,
+    textureVoidLikelihood: 0.29,
+    textureVoidWidthMin: 120,
+    textureVoidWidthMax: 420,
+    textureBandDensity: 2.9,
+    textureColorBlending: 0.06,
+    textureSeed: 536,
+    textureEase: 0.5,
+    proceduralBackgroundColor: '#775454',
+    textureShapeTriangles: 20,
+    textureShapeCircles: 15,
+    textureShapeBars: 15,
+    textureShapeSquiggles: 10,
+    domainWarpEnabled: false,
+    domainWarpIntensity: 0,
+    domainWarpScale: 3,
+    vignetteIntensity: 0,
+    vignetteRadius: 0.8,
+    fresnelEnabled: false,
+    fresnelPower: 2,
+    fresnelIntensity: 0.5,
+    fresnelColor: '#FFFFFF',
+    iridescenceEnabled: false,
+    iridescenceIntensity: 0.5,
+    iridescenceSpeed: 1,
+    bloomIntensity: 0,
+    bloomThreshold: 0.7,
+    chromaticAberration: 0,
+    shapeType: 'plane',
+    shapeRotationX: 0,
+    shapeRotationY: 0,
+    shapeRotationZ: 0,
+    shapeAutoRotateSpeedX: 0,
+    shapeAutoRotateSpeedY: 0,
+    sphereRadius: 15,
+    torusRadius: 15,
+    torusTube: 5,
+    cylinderRadius: 10,
+    cylinderHeight: 40,
+    planeBend: 0,
+    planeTwist: 0,
+    silhouetteFade: 0.25,
+    cylinderFade: 0.08,
+    ribbonFade: 0.05,
+    flatShading: true,
+    cameraLock: true,
+    cameraX: 0,
+    cameraY: 0,
+    cameraZ: 0,
+    cameraRotationX: 0,
+    cameraRotationY: 0,
+    cameraRotationZ: 0,
+    cameraZoom: 1,
+  };
+
+  const gradient = new NeatGradient({
+      ref: document.getElementById("gradient"),
+      ...config
+  });
+
+  // Zatrzymujemy animację WebGL, gdy hero wyjdzie poza widok (oszczędza CPU/GPU),
+  // i wznawiamy ją, gdy użytkownik wróci do góry strony.
+  let activeGradient = gradient;
+  const heroSection = document.getElementById('hero');
+
+  if (heroSection && 'IntersectionObserver' in window) {
+    const gradientObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting && activeGradient) {
+          activeGradient.destroy();
+          activeGradient = null;
+        } else if (entry.isIntersecting && !activeGradient) {
+          activeGradient = new NeatGradient({
+            ref: document.getElementById("gradient"),
+            ...config
+          });
+        }
+      });
+    }, { threshold: 0 });
+
+    gradientObserver.observe(heroSection);
+  }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ---------------------------------------------------------
+     0. KINOWY PŁYNNY SCROLL (LENIS.JS)
+     --------------------------------------------------------- */
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    wheelMultiplier: 1
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        lenis.scrollTo(targetEl, { offset: 0 });
+        if (mainNav.classList.contains('is-open')) {
+          mainNav.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  });
+
+  /* ---------------------------------------------------------
+     1. MENU MOBILNE & HEADER SCROLL
+     --------------------------------------------------------- */
+  const siteHeader = document.getElementById('siteHeader');
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
+
+  lenis.on('scroll', (e) => {
+    if (e.scroll > 50) {
+      siteHeader?.classList.add('is-scrolled');
+    } else {
+      siteHeader?.classList.remove('is-scrolled');
+    }
+  });
+
+  /* ---------------------------------------------------------
+     2. LICZNIK ZAPISÓW
+     --------------------------------------------------------- */
+  const targetDate = new Date('2027-01-10T09:00:00+01:00').getTime();
+  const cdDays = document.getElementById('cd-days');
+  const cdHours = document.getElementById('cd-hours');
+  const cdMinutes = document.getElementById('cd-minutes');
+  const cdSeconds = document.getElementById('cd-seconds');
+  const cdTimer = document.getElementById('countdownTimer');
+  const cdClosed = document.getElementById('countdownClosed');
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      if (cdTimer) cdTimer.style.display = 'none';
+      if (cdClosed) cdClosed.style.display = 'block';
+      return;
+    }
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    if (cdDays) cdDays.textContent = String(d).padStart(2, '0');
+    if (cdHours) cdHours.textContent = String(h).padStart(2, '0');
+    if (cdMinutes) cdMinutes.textContent = String(m).padStart(2, '0');
+    if (cdSeconds) cdSeconds.textContent = String(s).padStart(2, '0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* ---------------------------------------------------------
+     3. REVEAL ANIMACJE (SCROLL OBSERVER)
+     --------------------------------------------------------- */
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal, .reveal-scale').forEach(el => observer.observe(el));
+
+  /* ---------------------------------------------------------
+     4. PROGRAM HARMONOGRAM (AKORDION)
+     --------------------------------------------------------- */
+  const programCards = document.querySelectorAll('.program-card');
+  programCards.forEach((card, index) => {
+    const head = card.querySelector('.program-card-head');
+    const body = card.querySelector('.program-card-body');
+
+    head.addEventListener('click', () => {
+      const isOpen = card.classList.contains('is-open');
+
+      programCards.forEach(c => {
+        c.classList.remove('is-open');
+        c.querySelector('.program-card-body').style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        card.classList.add('is-open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ---------------------------------------------------------
+     5. FAQ (AKORDION)
+     --------------------------------------------------------- */
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+
+      faqItems.forEach(i => {
+        i.classList.remove('is-open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        item.classList.add('is-open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ---------------------------------------------------------
+     6. GALERIA KARUZELA I LIGHTBOX
+     Obsługa przewijania galerii oraz lightboxa znajduje się
+     w osobnych blokach <script> poniżej, aby uniknąć
+     duplikowania listenerów na tych samych przyciskach.
+     --------------------------------------------------------- */
+});
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // === 1. OBSŁUGA LIGHTBOXA ===
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    if (!galleryItems.length || !lightbox) return;
+
+    let currentIndex = 0;
+
+    // Pobranie listy obrazków z galerii
+    const images = Array.from(galleryItems).map(item => {
+      const img = item.querySelector('img');
+      return {
+        src: img ? img.getAttribute('src') : '',
+        alt: img ? img.getAttribute('alt') : 'Zdjęcie z galerii'
+      };
+    });
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightboxImage();
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // Zablokowanie przewijania strony
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; // Przywrócenie przewijania strony
+    }
+
+    function updateLightboxImage() {
+      lightboxImg.src = images[currentIndex].src;
+      lightboxImg.alt = images[currentIndex].alt;
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateLightboxImage();
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateLightboxImage();
+    }
+
+    // Kliknięcie w zdjęcie w galerii
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => openLightbox(index));
+    });
+
+    // Przyciski nawigacji
+    lightboxClose.addEventListener('click', closeLightbox);
+    
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextImage();
+    });
+
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevImage();
+    });
+
+    // Zamknięcie po kliknięciu w tło poza zdjęciem
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Obsługa klawiatury (Escape, strzałki lewo/prawo)
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Generyczna funkcja przewijania dowolnej karuzeli (galeria zdjęć / shortsy)
+  function setupCarousel(trackId, prevId, nextId, itemSelector, visibleCount) {
+    const track = document.getElementById(trackId);
+    const prevBtn = document.getElementById(prevId);
+    const nextBtn = document.getElementById(nextId);
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    function scroll(direction) {
+      const item = track.querySelector(itemSelector);
+      if (!item) return;
+
+      // Obliczamy szerokość 1 elementu i odstępu (gap)
+      const style = window.getComputedStyle(track);
+      const gap = parseFloat(style.gap) || 0;
+      const itemWidth = item.getBoundingClientRect().width;
+
+      // Dokładny dystans do przewinięcia
+      const scrollDistance = (itemWidth + gap) * visibleCount;
+
+      track.scrollBy({
+        left: direction === 'next' ? scrollDistance : -scrollDistance,
+        behavior: 'smooth'
+      });
+    }
+
+    nextBtn.addEventListener('click', () => scroll('next'));
+    prevBtn.addEventListener('click', () => scroll('prev'));
+  }
+
+  // Galeria foto
+  setupCarousel('galleryTrack', 'galleryPrev', 'galleryNext', '.gallery-item', 3);
+
+  // Rolki i Shortsy (wcześniej przyciski nie miały żadnej obsługi JS)
+  setupCarousel('shortsTrack', 'shortsPrev', 'shortsNext', '.short-card', 1);
+});
+</script>
+
+</body>
+</html>
